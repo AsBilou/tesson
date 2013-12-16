@@ -3,8 +3,91 @@
         <link rel="stylesheet" media="screen" href="dist/css/bootstrap.css">
     </head>
     <body>
-        <h1>Hello</h1>
+        <div class="container bs-docs-container">
+            <div class="row">
+                    <h1>Location appartement de Françoise</h1>
+                    <p>
+                        Appartement de 36m2 récemment  rénové, très lumineux, sud/sud­est .
+                        2 pièces séjour/chambre, cuisine/repas et salle de douche/WC. Capacité pour 2­3 personnes.
+                        Entièrement équipé.
+                        L'appartement est situé rue Tesson dans le 10 ème au 6 ème étage avec ascenseur, entre le Bas Belleville et la République, dans un quartier vivant, à proximité de tous commerces. 
+                        Métro (Goncourt) et bus à 200m. 
+                        Les environs bucoliques du canal Saint­ Martin, la vie nocturne agréable du quartier, une multitude de cafés et de petits restaurants sympathiques. 
+                        Atmosphère typique parisienne (proche de l'hôtel du Nord). 
+                        Le dimanche, les rues le long du canal sont fermées à la circulation automobile et deviennent le royaume des piétons et vélos, sans oublier les balades en bateau sur le canal. 
+                        La Place de la République est à 10mn à pied.
+                    </p>
+                        <h4>Tarif : </h4>
+                        <ul>
+                            <li>450€ la semaine</li>
+                            <li>150€ le WE</li>
+                            <li>75€/jour </li>
+                            <li>minimum de 2 nuités</li>
+                            <li>10€/jour et par personne sup</li>
+                            <li>plus 50€ pour le linge et le ménage.</li>
+                        </ul>
+                        
+                        <h4>Equipement :</h4>
+                        <ul>
+                            <li>Cuisine :
+                                <ul>
+                                    <li>Plaques de cuisson induction</li>
+                                    <li>Micro-onde</li>
+                                    <li>Réfrigérateur congélateur</li>
+                                    <li>Cafetière</li>
+                                    <li>Théière</li>
+                                    <li>Lave-vaisselle</li>
+                                    <li>Lave-linge/sèche linge</li>
+                                    <li>Grille-pain</li>
+                                    <li>Bouilloire</li>
+                                </ul>
+                            </li>
+                            <li>Multimédia :
+                                <ul>
+                                    <li>Téléphone</li>
+                                    <li>Télévision</li>
+                                    <li>Internet haut débit</li>
+                                </ul>
+                            </li>
+                            <li>Autres :
+                                <ul>
+                                    <li>Aspirateur</li>
+                                    <li>Fer à repasser</li>
+                                    <li>Table à repasser</li>
+                                    <li>Sèche-cheveux</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        
+                        <h4>Photos</h4>
+                        <div id="photo_1" style="width: 100%; height: 600px;"></div>
+                        <div id="photo_2" style="width: 100%; height: 600px;"></div>
+                        <div id="photo_3" style="width: 100%; height: 600px;"></div>
+                        <div id="photo_4" style="width: 100%; height: 600px;"></div>
+                        <div id="photo_5" style="width: 100%; height: 600px;"></div>
+                        <div id="photo_6" style="width: 100%; height: 600px;"></div>
+            </div>
+        </div>
         <script src="dist/js/jquery-1.10.2.js"></script>
         <script src="dist/js/bootstrap.js"></script>
+        <script type="text/javascript" src="http://threejs.org/build/three.min.js"></script>
+		<script async="true" type="text/javascript" src="dist/photosphere/lib/sphere.js"></script>
+        <script type="text/javascript">
+			function setup(){
+			 
+			     new Photosphere('1.jpg').loadPhotosphere(document.getElementById("photo_1"));
+			     //sphere.loadPhotosphere(document.getElementById("photo_1"));
+			     
+				/*for (var i = 1;i<=6; i++){
+    				var photo = i+'.jpg';
+    				sphere = new Photosphere(photo);
+					//sphere.loadPhotosphere(document.getElementById("photo_"+i));
+					console.log(i+'.jpg');
+				}*/
+			}
+			$(function() {
+                    setup();
+            });
+		</script>
     </body>
 </html>
